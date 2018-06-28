@@ -28,6 +28,8 @@ img {
     position: sticky;
     position: -webkit-sticky;
     top: 20px;
+    /* for speeding up the animation and for better performance */
+    transform: translateZ(0);
 }
 
 h3 {
