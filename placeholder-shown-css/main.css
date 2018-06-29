@@ -1,0 +1,35 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+    padding: 3em;
+}
+
+input {
+    width: 80%;
+    font-size: 1.4em;
+}
+
+button {
+    font-size: 2em;
+}
+
+.msg {
+    padding: 1em;
+    margin: 1em 0;
+    background-color: #fffde3;
+    width: 30%;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+input:not(:placeholder-shown) + .msg {
+    opacity: 1;
+}
+
+/* body :not(p) {
+    color: indianred;
+} */
+
+/* input:placeholder-shown {
+    border: 2px solid green;
+} */
