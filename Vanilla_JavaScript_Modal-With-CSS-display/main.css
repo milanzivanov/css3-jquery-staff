@@ -1,0 +1,11 @@
+.modal {
+    display: none;
+}
+
+.backdrop {
+    display: none;
+}
+
+.open {
+    display: block;
+}
