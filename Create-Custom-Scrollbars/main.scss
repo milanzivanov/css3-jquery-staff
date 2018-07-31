@@ -1,0 +1,34 @@
+$primary: #212121;
+
+body, html {
+    height: 100vh;
+}
+
+body {
+    background: $primary;
+    color: #fff;
+    font-family: sans-serif;
+    display: grid;
+    grid-auto-columns: 80% auto;
+    margin: 0;
+
+    main p {
+        margin: 1em;
+        padding: 1em;
+        background: lighten($primary: 5%);
+        opacity: .4%;
+        font-size: .9em;
+    }
+
+    aside {
+        background: lighten($primary: 5%);
+    }
+
+    .simplebar-scrollbar:before {
+        background-color: lighten($primary: 30%);
+    }
+
+    .simplebar-scrollbar {
+        margin-right: 2px;
+    }
+}

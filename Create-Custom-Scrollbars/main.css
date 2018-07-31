@@ -1,0 +1,14 @@
+body, html {
+  height: 100vh;
+}
+
+body {
+  background: #212121;
+  color: #fff;
+  font-family: sans-serif;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-columns: 80% auto;
+  margin: 0;
+}
+/*# sourceMappingURL=main.css.map */
