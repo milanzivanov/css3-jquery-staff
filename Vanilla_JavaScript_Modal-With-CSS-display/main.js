@@ -1,44 +1,82 @@
-let buttons = document.querySelectorAll("button");
-let modal = document.querySelector(".modal");
-let backdrop = document.querySelector(".backdrop");
+var editvalueButton = document.querySelector("button");
+var demoContainer = document.querySelector('.demoContainer');
+var backdrop;
+var modal;
 
 let outputPara = document.querySelector("#quote");
-let textEdit = document.querySelector(".modal textarea");
 
 let quote = "A modal component on a webpage - how hard could it be?";
 let editedQuote = '';
 
-// outputPara.textContent = quote;
 function updatePara() {
     outputPara.textContent = quote;
 }
 
 function closeModal() {
-    modal.style.display = "none";
-    backdrop.style.display = "none";
+    if (backdrop) {
+        backdrop.remove();
+    }
+    if (modal) {
+        modal.remove();
+    }
 }
 
 updatePara();
 
-buttons[2].addEventListener('click', function() {
-    modal.style.display = "block";
-    backdrop.style.display = "block";
+editvalueButton.addEventListener('click', function() {
+
+    // backdrop
+    backdrop = document.createElement('div');
+    backdrop.classList.add('backdrop');
+    document.body.insertBefore(backdrop, demoContainer);
+    backdrop.addEventListener("click", closeModal);
+
+    // modal
+    modal = document.createElement('div');
+    modal.classList.add('modal'); 
+
+    var modalHeading = document.createElement('h1');
+    modalHeading.textContent = 'Edit your Statment';
+    modal.appendChild(modalHeading);
+
+    var textEditContainer = document.createElement('div');
+    textEditContainer.classList.add('modal-input');
+    modal.appendChild(textEditContainer);
+
+    var textEditArea = document.createElement('textarea');
+    textEditArea.rows = '3';
+    textEditArea.addEventListener("input", function() {
+        editedQuote = textEditArea.value;
+    });
+    textEditArea.value = quote;
+
+    textEditContainer.appendChild(textEditArea);
+
+    var modalActionsContainer = document.createElement('div');
+    modalActionsContainer.classList.add('modal-actions');
+    modal.appendChild(modalActionsContainer);
+
+    var cancelButton = document.createElement('button');
+    cancelButton.setAttribute('type', 'button');
+    cancelButton.classList.add('btn-cancel');
+    cancelButton.textContent = 'cancel';
+    cancelButton.addEventListener('click', closeModal);
+    modalActionsContainer.appendChild(cancelButton);
+
+    var confirmButton = document.createElement('button');
+    confirmButton.setAttribute('type', 'button');
+    confirmButton.classList.add('btn-confirm');
+    confirmButton.textContent = 'Confirm';
+    confirmButton.addEventListener('click', function() {
+        closeModal();
+        if (editedQuote.trim().length > 0) {
+            quote = editedQuote;
+            updatePara();
+        }
+    });
+    modalActionsContainer.appendChild(confirmButton);
+
+    document.body.insertBefore(modal, demoContainer);
+
     editedQuote = quote;
-    textEdit.value = quote;
-});
-
-buttons[0].addEventListener("click", closeModal);
-backdrop.addEventListener("click", closeModal);
-
-buttons[1].addEventListener('click', function() {
-    closeModal();
-    if (editedQuote.trim().length > 0) {
-        quote = editedQuote;
-        // outputPara.textContent = quote;
-        updatePara();
-    }
-});
-
-textEdit.addEventListener("input", function() {
-    editedQuote = textEdit.value;
 });
