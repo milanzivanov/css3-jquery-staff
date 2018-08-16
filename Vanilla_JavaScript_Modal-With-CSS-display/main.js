@@ -1,15 +1,15 @@
-var editvalueButton = document.querySelector("button");
-var demoContainer = document.querySelector('.demoContainer');
-var backdrop;
-var modal;
+let editvalueButton = document.querySelector("button");
+let demoContainer = document.querySelector('.demoContainer');
+let backdrop;
+let modal;
 
 let outputPara = document.querySelector("#quote");
 
-let quote = "A modal component on a webpage - how hard could it be?";
+let quote = "Laku noc pusa musa za Branku cicka od nekog frika :*";
 let editedQuote = '';
 
 function updatePara() {
-    outputPara.textContent = quote;
+    // outputPara.textContent = quote;
 }
 
 function closeModal() {
@@ -36,8 +36,12 @@ editvalueButton.addEventListener('click', function() {
     modal.classList.add('modal'); 
 
     var modalHeading = document.createElement('h1');
-    modalHeading.textContent = 'Edit your Statment';
+    modalHeading.textContent = `Laku noc posiljka`;
     modal.appendChild(modalHeading);
+
+    var modalHeading2 = document.createElement('h2');
+    modalHeading2.textContent = `Primalac: Branka Viljanac`;
+    modal.appendChild(modalHeading2);
 
     var textEditContainer = document.createElement('div');
     textEditContainer.classList.add('modal-input');

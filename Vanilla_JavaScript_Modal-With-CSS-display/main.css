@@ -1,11 +1,98 @@
+body, html {
+    font-family: Roboto;
+    margin: 0;
+    padding: 0;
+    background-image: url('./footCat.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 99%;
+    width: 100%;
+}
+
+h1 {
+    color: indianred;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+}
+
+h2 {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    color: springgreen;
+}
+
+button.center {
+    position: fixed;
+    z-index: 200;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 1rem;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button.center i {
+    color: red;
+}
+
 .modal {
     position: fixed;
     z-index: 200;
-    top: 40%;
-    left: 40%;
-    width: 20%;
-    background: #fff;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    background-image: url('./bg-modal.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 1rem;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    outline: none;
+    border: none;
+    margin: 0 0 15px 0;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+button.center {
+    background-color: #ccc;
+    color: black;
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 15px;
+    color: indianred;
+}
+
+button.btn-confirm:hover,
+button.btn-confirm:active {
+    color: white;
+    background-color: springgreen;
+    cursor: pointer;
+}
+
+button.btn-cancel:hover,
+button.btn-cancel:active {
+    color: white;
+    background-color: indianred;
+    cursor: pointer;
 }
 
 .backdrop {
