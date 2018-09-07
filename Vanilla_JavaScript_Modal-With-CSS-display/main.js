@@ -5,7 +5,7 @@ let modal;
 
 let outputPara = document.querySelector("#quote");
 
-let quote = "Laku noc pusa musa za Branku cicka od nekog frika :*";
+let quote = "Laku noć poljubac od čoveka palog sa marsa koji ponekad zna da ti ide na ganglije :* Lepo sanjaj";
 let editedQuote = '';
 
 function updatePara() {
@@ -36,11 +36,11 @@ editvalueButton.addEventListener('click', function() {
     modal.classList.add('modal'); 
 
     var modalHeading = document.createElement('h1');
-    modalHeading.textContent = `Laku noc posiljka`;
+    modalHeading.textContent = `Laku noć pošiljka`;
     modal.appendChild(modalHeading);
 
     var modalHeading2 = document.createElement('h2');
-    modalHeading2.textContent = `Primalac: Branka Viljanac`;
+    modalHeading2.textContent = `Primalac: Osoba sa fotke`;
     modal.appendChild(modalHeading2);
 
     var textEditContainer = document.createElement('div');

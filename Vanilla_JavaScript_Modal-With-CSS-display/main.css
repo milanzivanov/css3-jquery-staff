@@ -2,13 +2,19 @@ body, html {
     font-family: Roboto;
     margin: 0;
     padding: 0;
-    background-image: url('./footCat.jpg');
+    background-image: url('./mrvica-branka.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100%;
+    height: 135%;
     width: 100%;
     overflow: hidden;
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        height: 100%;
+    }
 }
 
 h1 {
@@ -34,6 +40,12 @@ button.center {
     padding: 1rem;
 }
 
+@media screen and (max-width: 480px) {
+    button.center {
+        width: 60%;
+    }
+}
+
 .modal-actions {
     display: flex;
     justify-content: space-between;
@@ -51,7 +63,7 @@ button.center i {
     left: 50%;
     width: 80%;
     transform: translate(-50%, -50%);
-    background-image: url('./bg-modal.jpg');
+    background-image: url('./brankinaMacijaGrada.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -70,7 +82,7 @@ textarea {
 }
 
 button.center {
-    background-color: #ccc;
+    background-color: rgba(204, 204, 204, 0.91);
     color: black;
     cursor: pointer;
 }
