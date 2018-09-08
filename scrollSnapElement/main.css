@@ -1,0 +1,50 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    scroll-snap-type: y mandatory;
+    /* scroll-snap-type: y proximity; */
+
+    /* scroll-snap-type: x mandatory; */
+
+    
+    /* older spec implementation */
+    /* scroll-snap-type: mandatory;
+    scroll-snap-destination: 0% 100%;
+    scroll-snap-points-y: repeat(100%); */
+
+    overflow-y: scroll;
+    /* overflow-x: scroll; */
+    scroll-padding-top: 150px;
+
+    /* display: grid;
+    grid-template-columns: repeat(3, 100%); */
+    /* display: flex; */
+}
+
+section {
+    height: calc(100vh - 14em);
+    /* width: calc(100% - 14em); */
+    padding: 7em;
+    color: #fff;
+    scroll-snap-align: start;
+
+    /* scroll-snap-destination: 0% 100%;
+    scroll-snap-points-y: repeat(100%); */
+}
+section:nth-of-type(1) {
+    background-color: rgb(96, 175, 21);
+}
+section:nth-of-type(2) {
+    background-color: rgb(21, 139, 175);
+}
+section:nth-of-type(3) {
+    background-color: rgb(175, 21, 129);
+}
+
+h3 {
+    font-size: 3em;
+}
+
+p {
+    font-size: 1.2em;
+}
