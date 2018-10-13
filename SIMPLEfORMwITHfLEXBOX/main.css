@@ -1,0 +1,42 @@
+html {
+    font-size: 150%;
+    line-height: 1.4;
+  }
+  
+  body {
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 30em) 1fr;
+    min-height: 100vh;
+    place-items: center;
+    background: linear-gradient(135deg, #26d9d9, #105070);
+    justify-items: stretch;
+  }
+  
+  input, button {
+    font: inherit;
+    border: 0;
+  }
+  input:focus, button:focus {
+    outline: none;
+  }
+  
+  form {
+    display: flex;
+    grid-column: 2;
+  }
+  
+  input {
+    flex-grow: 1;
+    padding: 0.5em 0.75em;
+  }
+  
+  button {
+    padding: 0.5em 0.75em;
+    background: #8fef9f;
+  }
+  
+  svg {
+    display: block;
+    width: 3em;
+    height: auto;
+  }
